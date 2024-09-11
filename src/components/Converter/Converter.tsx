@@ -5,7 +5,7 @@ import * as SC from "./Converter.style";
 
 const Converter = () => {
   const [startCurrency, setStartCurrency] = useState(
-    navigator.languages[0] === "ru" ? "RUB" : "USD"
+    navigator.languages[0].slice(0, 2) === "ru" ? "RUB" : "USD"
   );
   const [endCurrency, setEndCurrency] = useState("EUR");
   const [value, setValue] = useState<string>("");
